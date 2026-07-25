@@ -7,7 +7,7 @@
         </encoder>
     </appender>
 
-    <logger name="com.chency.concurrent" level="debug" additivity="false">
+    <logger name="com.cchangy.concurrent" level="debug" additivity="false">
         <appender-ref ref="STDOUT"/>
     </logger>
 
