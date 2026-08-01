@@ -94,7 +94,7 @@ public class ThreadMethod {
         log.info("t1 state: {}", t1.getState());
 
         // 主线程睡眠500毫秒
-        SleepUtils.sleepMilliseconds(500);
+        SleepUtils.sleepMilliSeconds(500);
 
         log.info("t1 state: {}", t1.getState());
     }
@@ -133,7 +133,7 @@ public class ThreadMethod {
     private static void joinMethod() throws InterruptedException {
         Thread t1 = new Thread(() -> {
             log.info("开始...");
-            SleepUtils.sleepSeconds(1);
+            SleepUtils.sleep(1);
             count = 10;
             log.info("结束...");
         }, "t1");
@@ -165,7 +165,7 @@ public class ThreadMethod {
             }
         }, "t1");
         t1.start();
-        SleepUtils.sleepMilliseconds(500);
+        SleepUtils.sleepMilliSeconds(500);
         log.info("interrupting t1...");
         t1.interrupt();
 
@@ -179,7 +179,7 @@ public class ThreadMethod {
             }
         }, "t2");
         t2.start();
-        SleepUtils.sleepMilliseconds(500);
+        SleepUtils.sleepMilliSeconds(500);
         log.info("interrupting t2...");
         t2.interrupt();
     }
@@ -210,7 +210,7 @@ public class ThreadMethod {
         t1.start();
         t2.start();
 
-        SleepUtils.sleepMilliseconds(500);
+        SleepUtils.sleepMilliSeconds(500);
         log.info("interrupting t1...");
         t1.interrupt();
 
@@ -236,7 +236,7 @@ public class ThreadMethod {
             log.info("again park...");
         }, "t1");
         t1.start();
-        SleepUtils.sleepSeconds(2);
+        SleepUtils.sleep(2);
         log.info("interrupting t1...");
         t1.interrupt();
     }

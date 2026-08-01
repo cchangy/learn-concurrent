@@ -14,7 +14,7 @@ public class TwoPhaseTerminationTest {
         TwoPhaseTermination twoPhaseTermination = new TwoPhaseTermination();
         twoPhaseTermination.start();
 
-        SleepUtils.sleepSeconds(5);
+        SleepUtils.sleep(5);
 
         twoPhaseTermination.stop();
     }

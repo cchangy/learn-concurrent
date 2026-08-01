@@ -24,7 +24,7 @@ public class ThreadDaemon {
             @Override
             public void run() {
                 try {
-                    SleepUtils.sleepSeconds(10);
+                    SleepUtils.sleep(10);
                 } finally {
                     log.info("DaemonThread finally execute...");
                 }
